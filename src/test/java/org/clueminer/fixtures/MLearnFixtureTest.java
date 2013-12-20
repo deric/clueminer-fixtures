@@ -88,4 +88,9 @@ public class MLearnFixtureTest {
     public void testForrestFires() throws Exception {
         assertTrue(subject.forrestFires().exists());
     }
+
+    @Test
+    public void testIrBaClassification() throws Exception {
+        assertTrue(subject.irBaClassification().exists());
+    }
 }

@@ -40,4 +40,8 @@ public class MLearnFixture extends AbstractFixture {
     public File irisQuoted2() throws IOException {
         return resource("iris/iris-quoted2.data");
     }
+
+    public File irBaClassification() throws IOException {
+        return resource("ir/ir_ba_classification.csv");
+    }
 }
