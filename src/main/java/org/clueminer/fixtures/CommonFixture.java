@@ -66,6 +66,10 @@ public class CommonFixture extends AbstractFixture {
         return resource("insect/insect.arff");
     }
 
+    public File insectCsv() throws IOException {
+        return resource("insect/insect.csv");
+    }
+
     public File sonarArff() throws IOException {
         return resource("sonar/sonar.arff");
     }

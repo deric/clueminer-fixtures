@@ -115,6 +115,11 @@ public class CommonFixtureTest {
     }
 
     @Test
+    public void testInsectCsv() throws Exception {
+        assertTrue(instance.insectCsv().exists());
+    }
+
+    @Test
     public void testSonarArff() throws Exception {
         assertTrue(instance.sonarArff().exists());
     }
