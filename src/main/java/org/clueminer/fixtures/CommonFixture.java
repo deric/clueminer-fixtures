@@ -77,4 +77,8 @@ public class CommonFixture extends AbstractFixture {
     public File schoolData() throws IOException {
         return resource("school/school.data");
     }
+
+    public File zooCsv() throws IOException {
+        return resource("zoo/zoo.csv");
+    }
 }

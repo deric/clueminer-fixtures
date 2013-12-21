@@ -128,4 +128,9 @@ public class CommonFixtureTest {
     public void testSchoolData() throws Exception {
         assertTrue(instance.schoolData().exists());
     }
+
+    @Test
+    public void testZooCsv() throws Exception {
+        assertTrue(instance.zooCsv().exists());
+    }
 }
