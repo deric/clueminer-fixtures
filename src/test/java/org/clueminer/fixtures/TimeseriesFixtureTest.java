@@ -63,4 +63,9 @@ public class TimeseriesFixtureTest {
     public void testTs01() {
         assertTrue(instance.ts01().exists());
     }
+
+    @Test
+    public void testTsQuoted() {
+        assertTrue(instance.quoted().exists());
+    }
 }

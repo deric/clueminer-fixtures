@@ -26,4 +26,8 @@ public class TimeseriesFixture extends AbstractFixture {
     public File ts01() {
         return resource("ts/33040.csv");
     }
+
+    public File quoted() {
+        return resource("ts/quoted.csv");
+    }
 }
