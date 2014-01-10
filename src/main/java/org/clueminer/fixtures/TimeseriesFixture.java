@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class TimeseriesFixture extends AbstractFixture {
 
-    private static String PREFIX = "sax/timeseries/";
+    private static final String PREFIX = "sax/timeseries/";
 
     public File data01() throws IOException {
         return resource(PREFIX + "timeseries01.csv");
@@ -21,5 +21,9 @@ public class TimeseriesFixture extends AbstractFixture {
 
     public File irBenzin() throws IOException {
         return resource("ir/40757_3.CSV");
+    }
+
+    public File ts01() {
+        return resource("ts/33040.csv");
     }
 }

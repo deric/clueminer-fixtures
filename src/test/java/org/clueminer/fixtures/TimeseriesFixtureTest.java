@@ -1,6 +1,5 @@
 package org.clueminer.fixtures;
 
-import java.io.File;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,29 +12,28 @@ import static org.junit.Assert.*;
  * @author deric
  */
 public class TimeseriesFixtureTest {
-    
+
     private static TimeseriesFixture instance;
-    
+
     public TimeseriesFixtureTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
         instance = new TimeseriesFixture();
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
-
 
     /**
      * Test of data01 method, of class TimeseriesFixture.
@@ -58,6 +56,11 @@ public class TimeseriesFixtureTest {
      */
     @Test
     public void testIrBenzin() throws Exception {
-         assertTrue(instance.irBenzin().exists());
+        assertTrue(instance.irBenzin().exists());
+    }
+
+    @Test
+    public void testTs01() {
+        assertTrue(instance.ts01().exists());
     }
 }
