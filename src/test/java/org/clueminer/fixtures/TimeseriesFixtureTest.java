@@ -68,4 +68,14 @@ public class TimeseriesFixtureTest {
     public void testTsQuoted() {
         assertTrue(instance.quoted().exists());
     }
+
+    @Test
+    public void testTrace0() {
+        assertTrue(instance.trace0().exists());
+    }
+
+    @Test
+    public void testTrace1() {
+        assertTrue(instance.trace1().exists());
+    }
 }
