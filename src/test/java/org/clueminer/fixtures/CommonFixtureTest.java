@@ -138,4 +138,10 @@ public class CommonFixtureTest {
     public void testZooCsv() throws Exception {
         assertTrue(instance.zooCsv().exists());
     }
+
+    @Test
+    public void testLegendreCsv() throws Exception {
+        assertTrue(instance.legendreCsv().exists());
+    }
+
 }
