@@ -78,4 +78,9 @@ public class TimeseriesFixtureTest {
     public void testTrace1() {
         assertTrue(instance.trace1().exists());
     }
+    
+    @Test
+    public void testAP01() {
+        assertTrue(instance.ap01().exists());
+    }
 }

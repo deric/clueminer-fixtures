@@ -38,4 +38,8 @@ public class TimeseriesFixture extends AbstractFixture {
     public File trace1() {
         return resource("ts/trace1.csv");
     }
+    
+    public File ap01() {
+        return resource("ts/AP-01.csv");
+    }
 }
