@@ -34,8 +34,7 @@ public class CommonFixture extends AbstractFixture {
     }
 
     public File yeastData() throws IOException {
-        String datasetName = "yeast";
-        return resource(datasetName + File.separatorChar + datasetName + ".arff");
+        return resource("yeast/yeast.arff");
     }
 
     public File wellSeparatedCsv() throws IOException {
