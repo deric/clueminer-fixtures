@@ -88,4 +88,8 @@ public class CommonFixture extends AbstractFixture {
     public File legendreCsv() throws IOException {
         return resource("legendre/legendre.csv");
     }
+
+    public File usArrestsCsv() throws IOException {
+        return resource("state/USArrests.csv");
+    }
 }

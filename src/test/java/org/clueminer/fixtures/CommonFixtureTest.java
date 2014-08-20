@@ -144,4 +144,24 @@ public class CommonFixtureTest {
         assertTrue(instance.legendreCsv().exists());
     }
 
+    @Test
+    public void testWineArff() throws Exception {
+        assertTrue(instance.wineArff().exists());
+    }
+
+    @Test
+    public void testYeastData() throws Exception {
+        assertTrue(instance.yeastData().exists());
+    }
+
+    @Test
+    public void testMiguel() throws Exception {
+        assertTrue(instance.miguel().exists());
+    }
+
+    @Test
+    public void testUsArrestsCsv() throws Exception {
+        assertTrue(instance.usArrestsCsv().exists());
+    }
+
 }
