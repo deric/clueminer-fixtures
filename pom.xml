@@ -57,6 +57,7 @@
                 <configuration>
                     <publicPackages>
                         <publicPackage>org.clueminer.fixtures</publicPackage>
+                        <publicPackage>org.clueminer.report</publicPackage>
                     </publicPackages>
                 </configuration>
             </plugin>
