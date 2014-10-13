@@ -92,4 +92,9 @@ public class CommonFixture extends AbstractFixture {
     public File usArrestsCsv() throws IOException {
         return resource("state/USArrests.csv");
     }
+
+    public File singleLinkEffect() throws IOException {
+        return resource("simple/single-link-effect.ascii");
+    }
+
 }

@@ -164,4 +164,9 @@ public class CommonFixtureTest {
         assertTrue(instance.usArrestsCsv().exists());
     }
 
+    @Test
+    public void testSingleLinkEffect() throws Exception {
+        assertTrue(instance.singleLinkEffect().exists());
+    }
+
 }
