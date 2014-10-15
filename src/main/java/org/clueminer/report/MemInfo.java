@@ -11,28 +11,44 @@ public class MemInfo {
     private static final long MEGABYTE = 1024L * 1024L;
     protected long startTime;
     protected long startMemory;
+    protected long stopTime;
+    private boolean isRunning = false;
+
+    public MemInfo() {
+        startClock();
+    }
+
+    public MemInfo(boolean start) {
+        if (start) {
+            startClock();
+        }
+    }
 
     public static long bytesToMegabytes(long bytes) {
         return bytes / MEGABYTE;
     }
 
-    public void startClock() {
+    public final void startClock() {
         // Get the Java runtime
         Runtime runtime = Runtime.getRuntime();
         // Run the garbage collector
         runtime.gc();
         startMemory = runtime.totalMemory() - runtime.freeMemory();
         startTime = System.currentTimeMillis();
-
+        isRunning = true;
     }
 
     public void stopClock() {
-        long stopTime = System.currentTimeMillis();
-        long elapsedTime = stopTime - startTime;
-        System.out.println("time: " + elapsedTime / 1000 + "s, " + elapsedTime + "ms");
+        if (isRunning) {
+            stopTime = System.currentTimeMillis();
+            isRunning = false;
+        }
     }
 
     public void report() {
+        stopClock();
+        long elapsedTime = stopTime - startTime;
+        System.out.println("time: " + elapsedTime / 1000 + "s, " + elapsedTime + "ms");
         // Get the Java runtime
         Runtime runtime = Runtime.getRuntime();
         // Run the garbage collector
