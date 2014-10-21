@@ -3,12 +3,9 @@ package org.clueminer.report;
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
-import org.testng.Reporter;
 
 /**
- * Bridge between Java Logging API and TestNG's Reporter
- *
- * @author mbastian
+ * Dummy console reporter
  */
 public class ReporterHandler extends Handler {
 
@@ -22,7 +19,7 @@ public class ReporterHandler extends Handler {
         } else if (record.getLevel().equals(Level.SEVERE)) {
             prefix = "[SEVERE] ";
         }
-        Reporter.log(prefix + record.getMessage() + "<br>", true);
+        System.out.println(prefix + record.getMessage());
     }
 
     @Override
