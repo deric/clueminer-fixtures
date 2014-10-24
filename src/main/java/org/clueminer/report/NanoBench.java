@@ -71,7 +71,7 @@ public class NanoBench {
      */
     public NanoBench collect(Reporter report, String[] opts) {
         listeners = new ArrayList<>(1);
-        listeners.add(new Collector(logger, report, opts));
+        listeners.add(new Collector(report, opts));
         return this;
     }
 
