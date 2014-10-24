@@ -15,6 +15,7 @@ package org.clueminer.report;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+import java.io.File;
 import java.lang.management.ManagementFactory;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -25,8 +26,7 @@ import java.util.logging.Logger;
 /**
  * Lightweight CPU and memory benchmarking utility.
  * <p>
- * Inspired from nanobench
- * (http://code.google.com/p/nanobench/)
+ * Inspired from nanobench (http://code.google.com/p/nanobench/)
  *
  * @author mbastian
  */
@@ -60,6 +60,18 @@ public class NanoBench {
         listeners = new ArrayList<>(2);
         listeners.add(new CPUMeasure(logger));
         listeners.add(new MemoryUsage(logger));
+        return this;
+    }
+
+    /**
+     *
+     * @param report
+     * @param opts other parameters which will be recorded
+     * @return
+     */
+    public NanoBench collect(Reporter report, String[] opts) {
+        listeners = new ArrayList<>(1);
+        listeners.add(new Collector(logger, report, opts));
         return this;
     }
 
@@ -158,7 +170,7 @@ public class NanoBench {
      * Interface for measure listeners. Measure listeners are called when a
      * measurement is finished.
      */
-    private interface MeasureListener {
+    public interface MeasureListener {
 
         void onMeasure(MeasureState state);
     }
@@ -166,7 +178,7 @@ public class NanoBench {
     /**
      * Basic class to measure time spent in each measurement
      */
-    private static class MeasureState implements Comparable<MeasureState> {
+    public static class MeasureState implements Comparable<MeasureState> {
 
         private String label;
         private long startTime;
@@ -229,10 +241,9 @@ public class NanoBench {
      * CPU time listener to calculate the average time spent in a measurement.
      * <p>
      * The listener is called at the end of each measurement and collect the
-     * time spent from the
-     * <code>MeasureState</code> instance. At the last measurement it shows the
-     * average time spent, the total time and the number of measurement per
-     * seconds.
+     * time spent from the <code>MeasureState</code> instance. At the last
+     * measurement it shows the average time spent, the total time and the
+     * number of measurement per seconds.
      */
     private static class CPUMeasure implements MeasureListener {
 
@@ -285,8 +296,7 @@ public class NanoBench {
     /**
      * Memory usage listener to calculate the average memory usage.
      * <p>
-     * The
-     * listener is called after each measurement and perform a full GC and
+     * The listener is called after each measurement and perform a full GC and
      * calculate free memory. At the last measurement it shows the average
      * memory usage.
      */
