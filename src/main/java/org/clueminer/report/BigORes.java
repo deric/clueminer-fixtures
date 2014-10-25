@@ -12,6 +12,7 @@ public class BigORes {
     private static final DecimalFormat integerFormat = new DecimalFormat("#,##0.0");
     private static final double BY_SECONDS = 1000000000.0;
     private static final long MEGABYTE = 1024L * 1024L;
+    private static final long KBYTE = 1024L;
     private long totalTime;
     private long memory;
     private String[] opts;
@@ -51,7 +52,11 @@ public class BigORes {
     }
 
     public String totalMemoryInMb() {
-        return formatInt(bytesToMegabytes(memory));
+        return formatDouble(bytesToMegabytes(memory));
+    }
+
+    public String totalMemoryInKb() {
+        return formatDouble(bytesToKiloBytes(memory));
     }
 
     public long getMemory() {
@@ -74,8 +79,16 @@ public class BigORes {
         return bytes / MEGABYTE;
     }
 
+    public static long bytesToKiloBytes(long bytes) {
+        return bytes / KBYTE;
+    }
+
     private String formatInt(double value) {
         return integerFormat.format(value);
+    }
+
+    private String formatDouble(double value) {
+        return decimalFormat.format(value);
     }
 
 }
