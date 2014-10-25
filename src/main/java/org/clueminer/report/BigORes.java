@@ -8,8 +8,8 @@ import java.text.DecimalFormat;
  */
 public class BigORes {
 
-    private static final DecimalFormat decimalFormat = new DecimalFormat("#,##0.0000");
-    private static final DecimalFormat integerFormat = new DecimalFormat("#,##0.0");
+    private static final DecimalFormat decimalFormat = new DecimalFormat("###0.0000");
+    private static final DecimalFormat integerFormat = new DecimalFormat("###0.0");
     private static final double BY_SECONDS = 1000000000.0;
     private static final long MEGABYTE = 1024L * 1024L;
     private static final long KBYTE = 1024L;
