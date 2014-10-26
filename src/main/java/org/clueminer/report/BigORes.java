@@ -33,6 +33,14 @@ public class BigORes {
 
     /**
      *
+     * @return average run in seconds
+     */
+    public String avgTimeS() {
+        return decimalFormat.format(totalTime / measurements / BY_SECONDS);
+    }
+
+    /**
+     *
      * @return transaction per second
      */
     public String tps() {
