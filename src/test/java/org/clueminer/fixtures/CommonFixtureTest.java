@@ -169,4 +169,9 @@ public class CommonFixtureTest {
         assertTrue(instance.singleLinkEffect().exists());
     }
 
+    @Test
+    public void testZoo() throws Exception {
+        assertTrue(instance.zoo2Arff().exists());
+    }
+
 }

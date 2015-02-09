@@ -85,6 +85,10 @@ public class CommonFixture extends AbstractFixture {
         return resource("zoo/zoo.csv");
     }
 
+    public File zoo2Arff() throws IOException {
+        return resource("zoo/zoo2.arff");
+    }
+
     public File legendreCsv() throws IOException {
         return resource("legendre/legendre.csv");
     }
