@@ -57,6 +57,10 @@ public class CommonFixture extends AbstractFixture {
         return resource("ionosphere/ionosphere.arff");
     }
 
+    public File ionosphereArff2() throws IOException {
+        return resource("ionosphere/iono.arff");
+    }
+
     public File vehicleArff() throws IOException {
         return resource("vehicle/vehicle.arff");
     }
