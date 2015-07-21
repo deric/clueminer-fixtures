@@ -41,4 +41,14 @@ public class ClustFixtureTest {
         assertTrue(instance.ext100p3().exists());
     }
 
+    @Test
+    public void testInt400p4() throws Exception {
+        assertTrue(instance.int400p4().exists());
+    }
+
+    @Test
+    public void testInt400p4assign() throws Exception {
+        assertTrue(instance.int400p4assign().exists());
+    }
+
 }

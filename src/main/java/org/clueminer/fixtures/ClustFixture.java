@@ -33,4 +33,11 @@ public class ClustFixture extends AbstractFixture {
         return resource("clusterCrit/ext100_p3.csv");
     }
 
+    public File int400p4() throws IOException {
+        return resource("clusterCrit/int400_4.csv");
+    }
+
+    public File int400p4assign() throws IOException {
+        return resource("clusterCrit/int400_4_assign.csv");
+    }
 }
