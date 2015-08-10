@@ -179,4 +179,9 @@ public class CommonFixtureTest {
         assertTrue(instance.zoo2Arff().exists());
     }
 
+    @Test
+    public void testDs577() throws Exception {
+        assertTrue(instance.ds577().exists());
+    }
+
 }

@@ -105,4 +105,8 @@ public class CommonFixture extends AbstractFixture {
         return resource("simple/single-link-effect.ascii");
     }
 
+    public File ds577() throws IOException {
+        return resource("simple/DS577.arff");
+    }
+
 }
