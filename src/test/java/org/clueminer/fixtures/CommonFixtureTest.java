@@ -184,4 +184,8 @@ public class CommonFixtureTest {
         assertTrue(instance.ds577().exists());
     }
 
+    @Test
+    public void testBlobs() throws Exception {
+        assertTrue(instance.blobs().exists());
+    }
 }

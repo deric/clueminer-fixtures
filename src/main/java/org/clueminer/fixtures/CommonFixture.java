@@ -109,4 +109,8 @@ public class CommonFixture extends AbstractFixture {
         return resource("simple/DS577.arff");
     }
 
+    public File blobs() throws IOException {
+        return resource("simple/blobs.arff");
+    }
+
 }
