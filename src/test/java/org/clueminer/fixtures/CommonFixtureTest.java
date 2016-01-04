@@ -188,4 +188,9 @@ public class CommonFixtureTest {
     public void testBlobs() throws Exception {
         assertTrue(instance.blobs().exists());
     }
+
+    @Test
+    public void testGaussians1() throws Exception {
+        assertTrue(instance.gaussians1().exists());
+    }
 }

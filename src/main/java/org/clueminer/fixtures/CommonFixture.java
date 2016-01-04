@@ -113,4 +113,8 @@ public class CommonFixture extends AbstractFixture {
         return resource("simple/blobs.arff");
     }
 
+    public File gaussians1() throws IOException {
+        return resource("simple/gaussians1.arff");
+    }
+
 }
