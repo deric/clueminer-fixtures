@@ -1,6 +1,5 @@
 package org.clueminer.fixtures;
 
-import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
@@ -29,10 +28,6 @@ public class CommonFixtureTest {
     @Before
     public void setUp() {
         instance = new CommonFixture();
-    }
-
-    @After
-    public void tearDown() {
     }
 
     /**
@@ -192,5 +187,10 @@ public class CommonFixtureTest {
     @Test
     public void testGaussians1() throws Exception {
         assertTrue(instance.gaussians1().exists());
+    }
+
+    @Test
+    public void testSimplJson() throws Exception {
+        assertTrue(instance.simpleJson().exists());
     }
 }

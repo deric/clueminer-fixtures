@@ -133,4 +133,8 @@ public class CommonFixture extends AbstractFixture {
         return resource("simple/gaussians1.arff");
     }
 
+    public File simpleJson() throws IOException {
+        return resource("json/simple.json");
+    }
+
 }
