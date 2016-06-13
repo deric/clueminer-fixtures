@@ -15,7 +15,6 @@ package org.clueminer.report;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-import java.io.File;
 import java.lang.management.ManagementFactory;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
