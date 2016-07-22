@@ -64,4 +64,8 @@ public class MLearnFixture extends AbstractFixture {
     public File correlations() throws IOException {
         return resource("csv/correlation.csv");
     }
+
+    public File spirals() throws IOException {
+        return resource("csv/SpiralsData.csv");
+    }
 }

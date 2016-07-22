@@ -80,4 +80,9 @@ public class MLearnFixtureTest {
     public void testCorrelation() throws Exception {
         assertTrue(subject.correlations().exists());
     }
+
+    @Test
+    public void testSpirals() throws Exception {
+        assertTrue(subject.spirals().exists());
+    }
 }
