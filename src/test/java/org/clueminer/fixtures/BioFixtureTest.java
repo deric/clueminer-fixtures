@@ -48,6 +48,11 @@ public class BioFixtureTest {
     public void testGenomeFasta() throws Exception {
         File result = instance.genomeFasta();
         assertEquals(true, result.exists());
+    }
 
+    @Test
+    public void testH1Test() throws Exception {
+        File result = instance.h1Test();
+        assertEquals(true, result.exists());
     }
 }

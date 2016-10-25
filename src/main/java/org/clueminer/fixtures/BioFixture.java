@@ -38,4 +38,8 @@ public class BioFixture extends AbstractFixture {
     public File genomeFasta() throws IOException {
         return resource(folder + "Genome03EqSet01.fasta");
     }
+
+    public File h1Test() throws IOException {
+        return resource(folder + "h1-test.arff");
+    }
 }
