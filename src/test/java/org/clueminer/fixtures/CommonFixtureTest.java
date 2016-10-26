@@ -1,9 +1,23 @@
+/*
+ * Copyright (C) 2011-2016 clueminer.org
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.clueminer.fixtures;
 
-import org.junit.AfterClass;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -17,68 +31,39 @@ public class CommonFixtureTest {
     public CommonFixtureTest() {
     }
 
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
     @Before
     public void setUp() {
         instance = new CommonFixture();
     }
 
-    /**
-     * Test of makePath method, of class CommonFixture.
-     */
     @Test
     public void testMakePath() throws Exception {
     }
 
-    /**
-     * Test of irisData method, of class TestFixture.
-     */
     @Test
     public void testIrisData() throws Exception {
         assertTrue(instance.irisData().exists());
     }
 
-    /**
-     * Test of irisArff method, of class TestFixture.
-     */
     @Test
     public void testIrisArff() throws Exception {
         assertTrue(instance.irisArff().exists());
     }
 
-    /**
-     * Test of wineData method, of class TestFixture.
-     */
     @Test
     public void testWineData() throws Exception {
         assertTrue(instance.wineData().exists());
     }
 
-    /**
-     * Test of umgArff method, of class TestFixture.
-     */
     @Test
     public void testUmgArff() throws Exception {
         assertTrue(instance.umgArff().exists());
     }
 
-    /**
-     * Test of simpleCluster method, of class CommonFixture.
-     */
     @Test
     public void testSimpleCluster() throws Exception {
     }
 
-    /**
-     * Test of wellSeparatedCsv method, of class TestFixture.
-     */
     @Test
     public void testWellSeparatedCsv() throws Exception {
         assertTrue(instance.wellSeparatedCsv().exists());
@@ -192,5 +177,10 @@ public class CommonFixtureTest {
     @Test
     public void testSimplJson() throws Exception {
         assertTrue(instance.simpleJson().exists());
+    }
+
+    @Test
+    public void testLsun() throws Exception {
+        assertTrue(instance.lsun().exists());
     }
 }

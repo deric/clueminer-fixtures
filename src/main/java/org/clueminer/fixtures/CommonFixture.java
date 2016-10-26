@@ -137,4 +137,8 @@ public class CommonFixture extends AbstractFixture {
         return resource("json/simple.json");
     }
 
+    public File lsun() throws IOException {
+        return resource("artificial/lsun.arff");
+    }
+
 }
