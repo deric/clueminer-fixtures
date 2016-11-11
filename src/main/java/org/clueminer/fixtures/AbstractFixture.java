@@ -22,8 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -37,7 +36,7 @@ public class AbstractFixture {
         try {
             localPath = getPath();
         } catch (IOException ex) {
-            Logger.getLogger(AbstractFixture.class.getName()).log(Level.SEVERE, null, ex);
+            LoggerFactory.getLogger(AbstractFixture.class).warn("couldn't get local path", ex);
         }
     }
 

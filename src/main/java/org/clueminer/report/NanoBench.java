@@ -19,8 +19,8 @@ import java.lang.management.ManagementFactory;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Lightweight CPU and memory benchmarking utility.
@@ -34,7 +34,7 @@ public class NanoBench {
     public static NanoBench create() {
         return new NanoBench();
     }
-    private static final Logger logger = Logger.getLogger(NanoBench.class.getSimpleName());
+    private static final Logger logger = LoggerFactory.getLogger(NanoBench.class.getSimpleName());
     private int numberOfMeasurement = 50;
     private int numberOfWarmUp = 0;
     private List<MeasureListener> listeners;
@@ -101,7 +101,7 @@ public class NanoBench {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException ex) {
-            logger.log(Level.SEVERE, null, ex);
+            logger.warn(ex.getMessage(), ex);
         }
     }
     static int[] arrayStress = new int[10000];
