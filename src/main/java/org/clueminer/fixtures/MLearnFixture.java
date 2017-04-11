@@ -68,4 +68,8 @@ public class MLearnFixture extends AbstractFixture {
     public File spirals() throws IOException {
         return resource("csv/SpiralsData.csv");
     }
+
+    public File hdfSample() throws IOException {
+        return resource("hdf/sample.h5");
+    }
 }

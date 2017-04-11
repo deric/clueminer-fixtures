@@ -85,4 +85,9 @@ public class MLearnFixtureTest {
     public void testSpirals() throws Exception {
         assertTrue(subject.spirals().exists());
     }
+
+    @Test
+    public void testHdfSample() throws Exception {
+        assertTrue(subject.hdfSample().exists());
+    }
 }
