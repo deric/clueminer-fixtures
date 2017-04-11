@@ -141,4 +141,8 @@ public class CommonFixture extends AbstractFixture {
         return resource("artificial/lsun.arff");
     }
 
+    public File bla() throws IOException {
+        return resource("numerical/bla.arff");
+    }
+
 }

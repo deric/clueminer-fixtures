@@ -183,4 +183,9 @@ public class CommonFixtureTest {
     public void testLsun() throws Exception {
         assertTrue(instance.lsun().exists());
     }
+
+    @Test
+    public void testBla() throws Exception {
+        assertTrue(instance.bla().exists());
+    }
 }
