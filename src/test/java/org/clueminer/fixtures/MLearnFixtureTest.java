@@ -90,4 +90,9 @@ public class MLearnFixtureTest {
     public void testHdfSample() throws Exception {
         assertTrue(subject.hdfSample().exists());
     }
+
+    @Test
+    public void testEcoli() throws Exception {
+        assertTrue(subject.ecoli().exists());
+    }
 }

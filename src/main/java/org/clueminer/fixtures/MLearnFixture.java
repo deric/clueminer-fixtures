@@ -72,4 +72,8 @@ public class MLearnFixture extends AbstractFixture {
     public File hdfSample() throws IOException {
         return resource("hdf/sample.h5");
     }
+
+    public File ecoli() throws IOException {
+        return resource("uci/ecoli.arff");
+    }
 }
