@@ -188,4 +188,15 @@ public class CommonFixtureTest {
     public void testBla() throws Exception {
         assertTrue(instance.bla().exists());
     }
+
+    @Test
+    public void testJain() throws Exception {
+        assertTrue(instance.jain().exists());
+    }
+
+    @Test
+    public void testSpiral() throws Exception {
+        assertTrue(instance.spiral().exists());
+    }
+
 }

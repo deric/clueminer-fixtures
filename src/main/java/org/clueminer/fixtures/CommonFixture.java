@@ -145,4 +145,12 @@ public class CommonFixture extends AbstractFixture {
         return resource("numerical/bla.arff");
     }
 
+    public File jain() throws IOException {
+        return resource("artificial/jain.arff");
+    }
+
+    public File spiral() throws IOException {
+        return resource("artificial/spiral.arff");
+    }
+
 }
